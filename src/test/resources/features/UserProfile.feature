@@ -1,4 +1,4 @@
-@Smoke
+@Regression
 Feature: Validating User Profile
 
   Background:Setup User profile test

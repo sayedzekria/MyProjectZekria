@@ -1,4 +1,4 @@
-@Smoke
+@Regression
 Feature:  verify 5 rows as default
 
   Background: Accounts Page Test

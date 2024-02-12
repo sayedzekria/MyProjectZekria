@@ -32,6 +32,14 @@ public class SeleniumUtilities extends BaseSetup {
 
 
     }
+    public static void waitTime(int wait){
+        try{
+            Thread.sleep(wait);
+        }catch (InterruptedException ex){
+            ex.printStackTrace();
+        }
+    }
+
 
     public void clickONElement(By locator) {
         getWait().until(ExpectedConditions.elementToBeClickable(locator)).click();
@@ -45,6 +53,15 @@ public class SeleniumUtilities extends BaseSetup {
         WebElement element = getDriver().findElement(locator);
         Select select = new Select(element);
         select.selectByValue(value);
+    }
+    public String getRandomEmail() {
+        String name = "sayedzekria002";
+        String email = "@gmail.com";
+        String num = "";
+        for (int i = 0; i <= 4; i++) {
+            num += (int) (Math.random() * 10);
+        }
+        return name + num + email;
     }
 
     //Teacher
@@ -69,13 +86,7 @@ public class SeleniumUtilities extends BaseSetup {
     public WebElement waitUntilPresent(WebElement element){
         return getWait().until(ExpectedConditions.visibilityOf(element));
     }
-    public static void waitTime(int wait){
-        try{
-            Thread.sleep(wait);
-        }catch (InterruptedException ex){
-            ex.printStackTrace();
-        }
-    }
+
     public boolean isElementDisplayed(By locator) {
         return waitForVisibility(locator).isDisplayed();
     }

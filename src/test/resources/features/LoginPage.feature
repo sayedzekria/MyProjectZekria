@@ -1,4 +1,4 @@
-@Smoke
+@Regression
 Feature: Login Functionality tests
 
   Background:Setup test for Login and enter valid csr user

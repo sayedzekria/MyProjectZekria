@@ -35,7 +35,7 @@ public class AccountPageSteps extends SeleniumUtilities {
     @When("Page row is {string} data must be same")
     public void changeRows(String PageRows) {
         selectDropDownByText(AccountPage.ROWS_DROPDOWN_INPUT,PageRows);
-        waitTime(8000);
+        waitTime(1000);
         printRows(AccountPage.DATA_ROWS_INPUT_VALUE);
     }
 

@@ -1,4 +1,4 @@
-@Smoke
+@Regression
 Feature: Validating User Plans Page
 
   Background: Setup Plans Page Test

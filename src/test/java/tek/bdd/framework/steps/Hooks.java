@@ -14,12 +14,13 @@ public class Hooks extends SeleniumUtilities {
     }
     @After
     public void afterScenario(Scenario scenario) {
+        if (scenario.isFailed()){
 
 
-        TakesScreenshot takesScreenshot = (TakesScreenshot) getDriver();
+            TakesScreenshot takesScreenshot = (TakesScreenshot) getDriver();
         byte[] screenshot = takesScreenshot.getScreenshotAs(OutputType.BYTES);
         scenario.attach(screenshot, "image/png", "screenshot");
-
+    }
         quitBrowser();
 
     }

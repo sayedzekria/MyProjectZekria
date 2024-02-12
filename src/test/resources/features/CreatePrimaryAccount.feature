@@ -1,12 +1,12 @@
 @Regression
 Feature: Create Account functionality test
-  @US_3
+  @PositiveTesting
   Scenario: Positive test: Create valid new account
 
     Then Click on Create Primary Account
-  Then Create Primary Account Holder should be displayed
+    Then Create Primary Account Holder should be displayed
     When Fill Up Primary Account Holder on DataTable
-      |email  |   sayedizekria003@tekschool.us  |
+      |email  |   sayedizekria002@tekschool.us  |
       |title  |     Mr.   |
       |firstName  |   sayedzekria  |
       |lastName  |   sayedi |
@@ -17,4 +17,3 @@ Feature: Create Account functionality test
     Then Click on Create Account button
     Then Validate user is on 'sign in the account'
     Then Email should be display same as entry
-
